@@ -8,7 +8,8 @@ public class Main {
 		ArraySample asamp = new ArraySample();
 //		asamp.test3();
 //		asamp.test4();
-		asamp.test5();
+//		asamp.test5();
+		asamp.test6();
 		
 
 	}
