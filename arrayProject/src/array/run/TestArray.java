@@ -1,6 +1,7 @@
 package array.run;
 
 import array.Sample.ArraySample;
+import array.Sample.TwoArraySample;
 
 public class TestArray {
 
@@ -11,7 +12,10 @@ public class TestArray {
 //		asamp.testArray2();
 //		asamp.testArray3();
 //		asamp.testArrayInit();
-		asamp.testArrayInit2();
+//		asamp.testArrayInit2();
+		
+		TwoArraySample tasamp = new TwoArraySample();
+		tasamp.testMethod();
 	}
 
 }
