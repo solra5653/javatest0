@@ -1,6 +1,7 @@
 package primitive.array;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class ArraySample {
 	public void test1() {
@@ -52,9 +53,29 @@ public class ArraySample {
 	}
 	
 	public void test4(){
-		
+		Scanner sc= new Scanner(System.in);
+		System.out.print("숫자열 입력: ");
+		String num = sc.next();
+		String[] tot = new String[num.length()];
+		int sum = 0;
+		for(int i = 0; i<num.length(); i++) {
+			tot[i]= num.substring(i, i+1);
+			sum +=Integer.parseInt((tot[i]));
+		}
+		System.out.println("합 : " + sum);
 	}
-	
+	public void test5(){
+		Scanner sc= new Scanner(System.in);
+		System.out.print("숫자열 입력: ");
+		String num = sc.next();
+		char[] tot = new char[num.length()];
+		int sum = 0;
+		for(int i = 0; i<num.length(); i++) {
+		tot[i]= num.charAt(i);
+			sum += tot[i]-'0';
+		}
+		System.out.println("합 : " + sum);
+	}
 }
 
 

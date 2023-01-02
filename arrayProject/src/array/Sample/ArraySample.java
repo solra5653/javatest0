@@ -1,5 +1,7 @@
 package array.Sample;
 
+import java.util.Scanner;
+
 /**
  * 
  * 기본 자료형(Primitive Type) 1차원 배열 테스트용 클래스 2023.01.02(월) 작성
@@ -112,5 +114,26 @@ public class ArraySample {
 				System.out.println();
 			}
 		}
+	}
+	public void testArrayInit2() {
+		//배열공간 방갯수는 정수리터럴(값) 또는 정수변수 사용가능
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("배열로 할당할 방 갯수 : ");
+		int su = sc.nextInt();
+		
+		int[] nums = new int[su];
+		System.out.println("nums length : " + nums.length);
+		
+		//1~100사이의 임의의 난수가 기록되게 함
+		for(int i = 0; i < nums.length; i++) {
+			nums[i] = (int)(Math.random() * 100)+1;
+		}
+		
+		//출력 확인
+		for(int i = 0; i<nums.length; i++) {
+			System.out.print(nums[i] + "  ");
+		}
+		System.out.println();
 	}
 }

@@ -10,7 +10,8 @@ public class TestArray {
 //		asamp.testArray1();
 //		asamp.testArray2();
 //		asamp.testArray3();
-		asamp.testArrayInit();
+//		asamp.testArrayInit();
+		asamp.testArrayInit2();
 	}
 
 }
