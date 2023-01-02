@@ -61,8 +61,22 @@ public class TwoArraySample {
 			System.out.println();
 		}
 
-		
+		//1~100사이의 랜덤값 기록 처리
+		for(int i = 0; i<tar.length; i++) {
+			for(int j = 0; j<tar[i].length; j++) {
+				tar[i][j] = random.nextInt(100)+1;
+				System.out.print(tar[i][j]+ "     ");
+			}
+			System.out.println();
+		}
+			
+			//출력확인
+			for(int i = 0; i<tar.length; i++) {
+				for(int j = 0; j<tar[i].length; j++) {
+					System.out.print(tar[i][j]+ "     ");
+				}
+				System.out.println();
+			}
+		}
 		
 	}
-
-}
