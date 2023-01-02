@@ -87,22 +87,22 @@ public class ArraySample {
 		
 		System.out.println(year + ", " +month + ", " +day +
 				", "+gender);
-		//GregorianCalendar 사용
+//		GregorianCalendar 사용
 		GregorianCalendar birth = 
 				new GregorianCalendar(year +1900, month-1, day);
 		System.out.println(birth);
 		System.out.println("DAY_OF_WEEK : "
 		+ birth.get(Calendar.DAY_OF_WEEK));
 		
-//		switch(birth.get(Calendar.DAY_OF_WEEK)) {
-//		case 1 : System.out.println("일요일"); break;
-//		case 2 : System.out.println("월요일"); break;
-//		case 3 : System.out.println("화요일"); break;
-//		case 4 : System.out.println("수요일"); break;
-//		case 5 : System.out.println("목요일"); break;
-//		case 6 : System.out.println("금요일"); break;
-//		case 7 : System.out.println("토요일"); break;
-//		}
+		switch(birth.get(Calendar.DAY_OF_WEEK)) {
+		case 1 : System.out.println("일요일"); break;
+		case 2 : System.out.println("월요일"); break;
+		case 3 : System.out.println("화요일"); break;
+		case 4 : System.out.println("수요일"); break;
+		case 5 : System.out.println("목요일"); break;
+		case 6 : System.out.println("금요일"); break;
+		case 7 : System.out.println("토요일"); break;
+		}
 		String[] week = {"","일","월", "화","수","목", "금","토"};
 		System.out.println("생일의 요일 : " +
 		week[birth.get(Calendar.DAY_OF_WEEK)]);
