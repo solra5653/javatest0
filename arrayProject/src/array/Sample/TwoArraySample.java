@@ -74,19 +74,27 @@ public class TwoArraySample {
 	// 가변배열 테스트용
 	// 각 1차원배열들의 방갯수가 다른 경우
 	public void testMethod2() {
-		//2차원배열 선언과 생성시 열값 생략할 수 있음
+		// 2차원배열 선언과 생성시 열값 생략할 수 있음
 		int[][] tar = new int[3][];
-		//각 1차원배열의 주소보관용 배열 만들기만 함
-		
-		//각 행별 열(방)갯수는 나중에 지정하는 형태임
-		//2번째 new는 1차원 배열 만들기임
+		// 각 1차원배열의 주소보관용 배열 만들기만 함
+
+		// 각 행별 열(방)갯수는 나중에 지정하는 형태임
+		// 2번째 new는 1차원 배열 만들기임
 		tar[0] = new int[7];
 		tar[1] = new int[4];
 		tar[2] = new int[10];
-		
+
 		System.out.println("행갯수 : " + tar.length);
-		for(int i=0; i<tar.length; i++) {
+		for (int i = 0; i < tar.length; i++) {
 			System.out.println(i + "행별 열갯수 : " + tar[i].length);
+		}
+		// 출력확인
+		for (int i = 0; i < tar.length; i++) {
+			System.out.print(i + "행 : ");
+			for (int j = 0; j < tar[i].length; j++) {
+				System.out.printf("%5d", tar[i][j]);
+			}
+			System.out.println();
 		}
 	}
 }
