@@ -97,4 +97,35 @@ public class TwoArraySample {
 			System.out.println();
 		}
 	}
+	
+	//1차원배열의 초기화 : 배열공간 할당과 동시에 초기값 기록
+	//자료형[] 배열명 = {초기값, 초기값, .......};
+	//자료형[] 배열명 = new 자료형[]{초기값, 초기값, ......};
+	public void initTwoArray() {
+		//정변배열 초기화
+		int[][] tar = {{10,20,30,40}, 
+				{11,22,33,44}, {12,23,34,45}}; //3행 4열
+		//출력확인
+		for(int i=0;i<tar.length; i++) {
+			//각 행별 열(값)에 반복
+			for(int j = 0; j<tar[i].length; j++) {
+				System.out.print(tar[i][j]+ "  ");
+			}
+			System.out.println();
+		}
+	}
+	public void initTwoArray2() {
+		//가변배열 초기화
+		int[][] tar = {{10,20,30,40,50}, 
+				{11,22,33,44}, {12,23,34,45,56,78,89}}; //3행 열은 제각각
+		//출력확인
+		for(int i=0;i<tar.length; i++) {
+			System.out.println(i + "행의 값 갯수 : " + tar[i].length);
+			//각 행별 열(값)에 반복
+			for(int j = 0; j<tar[i].length; j++) {
+				System.out.print(tar[i][j]+ "  ");
+			}
+			System.out.println();
+		}
+	}
 }

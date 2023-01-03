@@ -16,7 +16,9 @@ public class TestArray {
 		
 		TwoArraySample tasamp = new TwoArraySample();
 //		tasamp.testMethod();
-		tasamp.testMethod2();
+//		tasamp.testMethod2();
+//		tasamp.initTwoArray();
+		tasamp.initTwoArray2();
 	}
 
 }
