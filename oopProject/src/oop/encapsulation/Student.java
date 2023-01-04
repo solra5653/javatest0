@@ -35,9 +35,12 @@ public class Student {
 	//jvm 이 준비한 각 자료형별 기본값(default) 으로 초기화됨
 	//boolean : false, char : '\u0000', 정수 : 0, 실수 : 0.0
 	//참조형 : null
-	public Student() {}
+	public Student() {
+		System.out.println("this 가 받은 주소 : " + this.hashCode());
+	}
 	
-	//매기변수가 있는 생성자
+	//매기변수가 있는 생성자-----------------------------------------
+	//필드 일부만 초기화 하는 방식
 	public Student(int no, String name, int age, char gender) {
 		this.no = no; 
 		this.name = name;
@@ -45,7 +48,102 @@ public class Student {
 		this.gender = gender;
 	}
 	
+	//필드 모두 초기화 하는 생성자
+	public Student(int no, String name, String major, double score, char grade, int age, char gender) {
+		this.no = no;	
+		this.name = name;
+		this.major = major;
+		this.score =score;
+		this.grade = grade;
+		this.age =age;
+		this.gender = gender;
+	}
 	//멤버함수(Method)
+	//non-static 메소드에는 this 레퍼런스가 존재함
+	//static 메소드에는 this 가 없다.
 	
-
+	
+	
+	//객체 안의 필드값 확인용 메소드
+	//1.  출력용
+	public void printInfo() {
+		System.out.println("학번 : " +this.no 
+								+ ", 이름 : " + this.name 
+								+ ", 전공 : " + this.major 
+								+ ", 학점 : " + this.score 
+								+ ", 등급 : " + this.grade 
+								+ ", 나이 : " + this.age 
+								+ ", 성별 : " + this.gender);	
+	}
+	
+	//2. 객체 정보를 문자열 합치기해서 문자열 리턴(일반적으로 쓰임)
+	public String information() {
+		return "학생정보 [ 학번 : " +this.no 
+				+ ", 이름 : " + this.name 
+				+ ", 전공 : " + this.major 
+				+ ", 학점 : " + this.score 
+				+ ", 등급 : " + this.grade 
+				+ ", 나이 : " + this.age 
+				+ ", 성별 : " + this.gender +" ]";
+	}
+	
+	//Setter ------------------------------------------------------
+	//필드 가각에 대해 필드값 변경
+	//작성방법 : 
+	//public void set필드명(자료형 매개변수){
+	//			this.필드 = 매개변수;
+	//}
+	
+	public void setNO(int no) {
+		System.out.println("setNo() 작동");
+		System.out.println("this 가 받은 주소 : " + this.hashCode());
+		this.no = no;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setMajor(String major) {
+		this.major = major;
+	}
+	public void setScore(double score) {
+		this.score = score;
+	}
+	public void setGrade(char grade) {
+		this.grade = grade;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+	
+	//Getter -----------------------------------------------------
+	//각각의 필드에 대해 기록된 값 조회용 메소드
+	//작성방법 : 
+	//public 반환값자료형 get필드명(){		return this.필드명;	}
+	
+	public int getNo() {
+		return this.no;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	public String getMajor() {
+		return this.major;
+	}
+	public double getScore() {
+		return this.score;	
+	}
+	public char getGrade() {
+		return this.grade;
+	}
+	public int getAge() {
+		return this.age;
+	}
+	public char getGender() {
+		return this.gender;
+	}
 }
