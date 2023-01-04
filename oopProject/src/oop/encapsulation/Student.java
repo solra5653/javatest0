@@ -35,9 +35,15 @@ public class Student {
 	//jvm 이 준비한 각 자료형별 기본값(default) 으로 초기화됨
 	//boolean : false, char : '\u0000', 정수 : 0, 실수 : 0.0
 	//참조형 : null
-	
+	public Student() {}
 	
 	//매기변수가 있는 생성자
+	public Student(int no, String name, int age, char gender) {
+		this.no = no; 
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+	}
 	
 	//멤버함수(Method)
 	
