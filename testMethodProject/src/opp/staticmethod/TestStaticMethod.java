@@ -9,8 +9,8 @@ public class TestStaticMethod {
 		StaticMethod.setValue("AbCdeF");
 		
 //		StaticMethod.toUpper();
-//		StaticMethod.setChar(1, 'L');
-		StaticMethod.valueLength();
+		StaticMethod.setChar(1, 'L');
+//		StaticMethod.valueLength();
 //		String result = StaticMethod.valueConcat("java");
 //		System.out.println("result : " + result);
 	}
