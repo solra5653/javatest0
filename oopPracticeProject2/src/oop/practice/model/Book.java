@@ -1,5 +1,5 @@
 package oop.practice.model;
-
+ㄴ
 public class Book {
 	//Field
 	private String title;			//책제목
