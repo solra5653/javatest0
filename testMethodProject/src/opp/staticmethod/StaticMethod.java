@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StaticMethod {
 	// field
-	private static String value;ㅍ
+	private static String value;
 	// constructor
 	// 객체 안에 만들어지는 인스턴스변수 초기화가 목적
 	// 클래스의 필드가 모두 static 이면 생성자가 필요없음.
