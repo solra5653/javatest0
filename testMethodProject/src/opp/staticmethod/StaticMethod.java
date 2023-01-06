@@ -44,8 +44,7 @@ public class StaticMethod {
 	// value 필드에서 전달받은 인덱스 위치의 값을 전달받은 문자로 변경하는 static 메소드
 	// 메소드명 : setChar
 	public static void setChar(int index, char c){
-//		System.out.println(value.substring(0,index) + c
-//				+ value.substring(index+ 1));
+//		System.out.println(value.substring(0,index) + c+ value.substring(index+ 1));
 		if(value != null && value.length() >0) {
 			if(index >= 0 && index <value.length()) {
 				//String 타입의 문자열 값에서 문자하나의 값을 변경하는
