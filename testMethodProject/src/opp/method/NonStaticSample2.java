@@ -93,15 +93,65 @@ public class NonStaticSample2 {
 	// 1. 문자열과 문자 하나를 전달받아, 문자열에 포함된 문자의 갯수를 리턴하는 메소드
 	// 포함된 문자가 없으면 0 리턴함
 	// 메소드명 : countChar
+	public int countChar(String s, char c) {
+		int count =0;
+		
+		if(s != null && s.length() > 0) {
+			//문자열 값이 있을때만 처리하도록 함
+			for(int i=0; i <s.length(); i++) {
+				if(s.charAt(i) == c) {
+					count++;
+				}
+			}
+		}
+		
+		return count;
+		//return 문은 메소드 맨마지막에 실행되게 작성해야됨.
+		//return 문은 메소드에서 딱 한번 실행되게 작성해야 함.
+		//return 값; 반환값 또는 반환 주소는 딱 한개만 사용함.
+		
+	}
+	
 
 	// 2. 정수 두 개를 전달받아, 두 수중 작은 값에서 큰 값사이의 정수들의 합계를 구해서
 	// 리턴하는 메소드
 	// 메소드명 : totalValue
+	public int totalValue(int first, int second) {
+		int sum = 0, min, max;
+		if(first >second) {
+			max = first;
+			min = second;
+		}else {
+			max = second;
+			min = first;
+		}
+		
+		for(int n = min; n <= max; n++) {
+			sum +=n;
+		}
+		return sum;
+	}
+	
 
 	// 문자열과 인덱스를 전달받아, 그 위치의 문자를 리턴하는 메소드
 	// 메소명명 : pCharAt
+	public char pCharAt(String s, int index) {
+		//char[] chArr = s.toCharArray();
+		//return chArr[index];
+		//method chaining : 레퍼런스.메소드().메소드().메소드()
+		//반환값이 있는 메소드일 때 사용할 수 있음.
+		//단, 반환값이 주소일 때 사용할 수 있음.
+		
+		//반환값이 배열일 때도 사용할 수 있음
+		return s.toCharArray()[index];
+		
+		//return s.charAt(index);		
+	}
 
+	
 	// 두 개의 문자열을 전달받아, 하나의 문자열로 합쳐서 리턴하는 메소드
 	// 메소드명 : pConcat
-
+	public String pConcat(String s1, String s2) {
+		return s1 + s2;
+	}
 }
