@@ -35,7 +35,7 @@ public class Student extends Human {
 		this.major = major;
 	}
 	public String printInformation(){
-		return super.printInformation()+ "\t "+ this.number + this.major;
+		return super.printInformation()+ "\t "+ this.number+ "\t " + this.major;
 		
 	}
 	

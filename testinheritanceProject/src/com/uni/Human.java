@@ -44,7 +44,7 @@ public class Human {
 	public String printInformation() {
 		return name 
 				+ "\t" + age 
-				+ "\t\t"+ height 
+				+ "\t"+ height 
 				+ "\t" + weight;
 	}
 	
